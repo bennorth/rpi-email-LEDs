@@ -1,0 +1,24 @@
+/* This file is hereby placed into the public domain by its author. */
+
+#slider-container {
+    float: left;
+}
+
+#myRange {
+    width: 300px;
+}
+
+#slider-value {
+    padding-top: 1.5ex;
+    font-size: 21px;
+    text-align: right;
+}
+
+#photo-container {
+    clear: both;
+}
+
+#leds-simulation-container {
+    margin: auto;
+    width: 360px;
+}
