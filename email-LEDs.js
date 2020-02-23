@@ -10,7 +10,8 @@ jQuery(document).ready(($) => {
 
 
     function show_on_leds(n) {
-        photo.src=`/blog/wp-content/uploads/2020/02/LEDs-showing-${n}.jpg`;
+        $("#leds-simulation-container .leds-photo").css("display", "none");
+        $(`#leds-value-${n}`).css("display", "block");
     }
 
     const async_load_image = (url =>
