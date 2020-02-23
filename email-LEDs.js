@@ -36,6 +36,9 @@ jQuery(document).ready(($) => {
 
     LED_paras = await Promise.all(LED_paras);
 
+    const container = $("#leds-simulation-container")[0];
+    LED_paras.forEach(p => container.appendChild(p));
+
     let old_number = 0;
     let frames = 1;
     function update_display() {
