@@ -2,7 +2,7 @@
   This program is hereby placed into the public domain by its authors.
 */
 
-jQuery(document).ready(async ($) => {
+jQuery(document).ready(($) => {
 
     var slider = document.getElementById("myRange");
     var output = document.getElementById("slider-value");
