@@ -36,14 +36,6 @@ jQuery(document).ready(async ($) => {
                               `/blog/wp-content/uploads/2020/02/LEDs-showing-${n}.jpg`));
     }
 
-    LED_paras = await Promise.all(LED_paras);
-
-    const container = $("#leds-simulation-container")[0];
-    LED_paras.forEach(p => container.appendChild(p));
-
-    $("#leds-simulation-placeholder").hide();
-    show_on_leds(0);
-
     let old_number = 0;
     let frames = 1;
     function update_display() {
@@ -72,5 +64,13 @@ jQuery(document).ready(async ($) => {
         window.requestAnimationFrame(update_display);
     }
 
-    window.requestAnimationFrame(update_display);
+    Promise.all(LED_para_promises).then(LED_paras => {
+        const container = $("#leds-simulation-container")[0];
+        LED_paras.forEach(p => container.appendChild(p));
+
+        $("#leds-simulation-placeholder").hide();
+        show_on_leds(0);
+
+        window.requestAnimationFrame(update_display);
+    });
 });
