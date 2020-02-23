@@ -29,9 +29,11 @@ jQuery(document).ready(async ($) => {
         return p;
     });
 
-    let LED_paras = [];
+    let LED_para_promises = [];
     for (let n = 0; n != 8; ++n) {
-        LED_paras.push(async_create_para(n, `/blog/wp-content/uploads/2020/02/LEDs-showing-${n}.jpg`));
+        LED_para_promises.push(
+            async_create_para(n,
+                              `/blog/wp-content/uploads/2020/02/LEDs-showing-${n}.jpg`));
     }
 
     LED_paras = await Promise.all(LED_paras);
