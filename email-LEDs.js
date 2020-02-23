@@ -23,7 +23,7 @@ jQuery(document).ready(($) => {
             show_on_leds(new_number);
         } else {
             if (old_number < 8) {
-                frame = 1;
+                frames = 1;
                 show_on_leds(0);
             }
 
