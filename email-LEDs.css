@@ -22,3 +22,11 @@
     margin: auto;
     width: 360px;
 }
+
+#leds-simulation-placeholder {
+    width: 360px;
+    height: 200px;
+    background-color: #ccc;
+    text-align: center;
+    padding-top: 56px;
+}
