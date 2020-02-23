@@ -6,7 +6,6 @@ jQuery(document).ready(($) => {
 
     var slider = document.getElementById("myRange");
     var output = document.getElementById("slider-value");
-    var photo = document.getElementById("leds-photo");
 
 
     function show_on_leds(n) {
