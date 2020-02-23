@@ -12,6 +12,14 @@ jQuery(document).ready(($) => {
     function show_on_leds(n) {
         photo.src=`/blog/wp-content/uploads/2020/02/LEDs-showing-${n}.jpg`;
     }
+
+    const async_load_image = (url =>
+        new Promise((resolve, reject) => {
+            let img = new Image();
+            img.onload = (() => resolve(img));
+            img.src = url;
+        }));
+
     let old_number = 0;
     let frames = 1;
     function update_display() {
