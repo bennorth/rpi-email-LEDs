@@ -40,6 +40,9 @@ jQuery(document).ready(($) => {
     const container = $("#leds-simulation-container")[0];
     LED_paras.forEach(p => container.appendChild(p));
 
+    $("#leds-simulation-placeholder").hide();
+    show_on_leds(0);
+
     let old_number = 0;
     let frames = 1;
     function update_display() {
