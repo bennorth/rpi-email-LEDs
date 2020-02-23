@@ -20,6 +20,15 @@ jQuery(document).ready(($) => {
             img.src = url;
         }));
 
+    const async_create_para = (async (n, url) => {
+        let img = await async_load_image(url);
+        let p = document.createElement("p");
+        p.setAttribute('class', 'leds-photo');
+        p.setAttribute('id', `leds-value-${n}`);
+        p.appendChild(img);
+        return p;
+    });
+
     let old_number = 0;
     let frames = 1;
     function update_display() {
